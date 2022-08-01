@@ -1,0 +1,144 @@
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: url("https://storage.googleapis.com/subtlepatterns-production/designers/subtlepatterns/uploads/triangle-mosaic.png") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  animation: bg-scrolling-reverse 0.92s infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 1.5;
+}
+
+h1,h2,h3,h4,li{
+  font-family: 'Red Hat Display', sans-serif;
+  padding: 10px;
+}
+h2{
+  font-size: 2.5rem;
+  
+}
+.container {
+padding:10px;
+display: grid;
+grid-template-columns:1fr 2fr;
+grid-template-rows: auto;
+grid-template-areas: "izq der";
+
+}
+
+.img_perfil{
+  width: 100%;
+ border-radius: 50%;
+}
+.texto{
+margin: 10px;
+grid-area:der;
+}
+.fot_fam{
+  padding:20px;
+  grid-area: izq;
+}
+.fam{
+  width: 100%;
+  border-radius: 10%;
+}
+.text_fam{
+  margin:10px;
+  grid-area: der;
+}
+footer{
+  background-color: grey;
+  padding:20px;
+  color:white;
+  display: flex;
+  justify-content: flex-end;
+}
+.mail{
+  margin: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+.color_link{
+  color:white;
+  text-decoration: none;
+  font-size: 14px;
+}
+.color_link:hover{
+  color:black;
+}
+.proyect{
+  text-align: center;
+}
+.proyect2{
+  padding: 10px 20px ;
+}
+.ul2{
+  list-style-type: none;
+}
+.center{
+  text-align: center;
+}
+.chica{
+  font-family:'Lexend Deca', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.lista{
+    font-family:'Lexend Deca', sans-serif;
+    font-size: 1rem;
+}
+
+
+@media only screen and (max-width: 768px){
+  .container{
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: 
+      "izq"
+      "der"
+    }
+  h2,h1{
+      font-size: 24px; 
+    }
+  p,.chicha,.lista{
+    font-size: 12px;
+      }
+  .foto, .foto_fam{
+        padding:5px;
+    }
+  .color_link{
+      color:white;
+      font-weight: bold;
+      font-size: 10px;
+  
+  }
+}
